@@ -79,7 +79,7 @@ html, body {
 }
 
 #terminal-input {
-  width: calc(100% - 150px); /* Adjust the width based on your layout */
+  width: 100%; /* Adjust the width based on your layout */
   background-color: #011627;
   border: none;
   caret-color: #fff; 
@@ -89,7 +89,7 @@ html, body {
 
 .command-prefix {
   white-space: pre; /* To ensure spaces are respected */
-    display: inline-block;
+  display: inline-block;
   color: #89DDFF;
 }
 
@@ -100,8 +100,8 @@ html, body {
 }
 
 .command-prefix::after {
-  content: '|';
-  animation: blink 1s step-end infinite;
+  content: '█';
+  animation: blink 1.25s step-end infinite;
 }
 
 /* Ekspandering av terminal-window */
