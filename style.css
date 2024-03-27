@@ -4,7 +4,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #261f45; /* Or any other background color you prefer */
+  background-color: #261f45; 
   font-family: monospace;
   
 }
@@ -39,7 +39,7 @@ html, body {
 #terminal-title {
   flex: 1;
   text-align: center;
-  margin: 0; /* Remove default margin from p tag */
+  margin: 0; /* Tar vekk default margin fra p tag */
 }
 
 #logo-container{
@@ -67,7 +67,7 @@ html, body {
   cursor: pointer;
   position: relative;
   outline: none;
-   /* Space between dots */
+  
 }
 
 .window-dot:last-child {
@@ -82,15 +82,27 @@ html, body {
   width: calc(100% - 150px); /* Adjust the width based on your layout */
   background-color: #011627;
   border: none;
+  caret-color: #fff; 
   color: #c5c8c6;
   outline: none;
 }
 
 .command-prefix {
+  white-space: pre; /* To ensure spaces are respected */
+    display: inline-block;
   color: #89DDFF;
 }
 
+/* Create the blinking effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
+.command-prefix::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
 
 /* Ekspandering av terminal-window */
 
