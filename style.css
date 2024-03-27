@@ -1,0 +1,104 @@
+html, body {
+  height: 90%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #261f45; /* Or any other background color you prefer */
+  font-family: monospace;
+  
+}
+
+#terminal {
+  width:600px;
+  height: 400px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  background-color: #011627;
+  color: #c5c8c6;
+  border-radius: 1px;
+  box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.75);
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#terminal-header {
+  color: #555555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: #e3e3e3;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 1px solid #333;
+  
+}
+
+#terminal-title {
+  flex: 1;
+  text-align: center;
+  margin: 0; /* Remove default margin from p tag */
+}
+
+#logo-container{
+  width: 30px;
+  height: 30px;
+}
+
+
+#logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+  
+}
+
+.window-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+   /* Space between dots */
+}
+
+.window-dot:last-child {
+  margin-right: 0;
+}
+
+#terminal-body {
+  padding: 10px;
+}
+
+#terminal-input {
+  width: calc(100% - 150px); /* Adjust the width based on your layout */
+  background-color: #011627;
+  border: none;
+  color: #c5c8c6;
+  outline: none;
+}
+
+.command-prefix {
+  color: #89DDFF;
+}
+
+
+
+/* Ekspandering av terminal-window */
+
+/* Button red-button */
+#terminal.large {
+  width: 800px; 
+  height: 600px;
+}
+
+
+
