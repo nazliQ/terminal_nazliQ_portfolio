@@ -1,39 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-  height: 90%;
+  height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #261f45; 
+  background-color:#19262E; 
   font-family: monospace;
-  
+  scrollbar-width: thin;
+  scrollbar-color: #011a2f;
 }
 
 #terminal {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  max-height: 600px;
   width:600px;
   height: 400px;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
   background-color: #011627;
-  color: #c5c8c6;
-  border-radius: 1px;
+  color: #666FEB;
+  border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.75);
   overflow: hidden;
   position: relative;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  
 }
 
 #terminal-header {
-  color: #555555;
+  color: #C0C5FF;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
-  background-color: #e3e3e3;
+  background-color: #666FEB;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  border-bottom: 1px solid #333;
-  
 }
 
 #terminal-title {
@@ -74,12 +80,42 @@ html, body {
   margin-right: 0;
 }
 
-#terminal-body {
-  padding: 10px;
+#terminal-body{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;  
 }
 
-#terminal-input {
-  width: 100%; /* Adjust the width based on your layout */
+textarea {
+  background-color: #011627;
+  color: aquamarine;
+  border: none;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  overflow: scroll;
+}
+
+/* Fjerne outline i textarea uten å ta vekk keyboard navigasjon til senere bruk*/
+
+textarea:focus{
+  outline: 1px solid #011627; 
+
+}
+
+/*Scrollbar - for firefox se html css tag. */
+
+/* webkit version*/
+::-webkit-scrollbar-thumb {
+  background:#278de0 ;
+}
+
+
+/* #terminal-input {
+
+  width: 100%; /* Adjust the width based on your layout 
   background-color: #011627;
   border: none;
   caret-color: #fff; 
@@ -87,13 +123,16 @@ html, body {
   outline: none;
 }
 
-.command-prefix {
-  white-space: pre; /* To ensure spaces are respected */
+*/
+
+/*.command-prefix {
+  white-space: pre; /* To ensure spaces are respected 
   display: inline-block;
   color: #89DDFF;
 }
 
-/* Create the blinking effect */
+
+/* Create the blinking effect 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -104,13 +143,16 @@ html, body {
   animation: blink 1.25s step-end infinite;
 }
 
+*/
+
 /* Ekspandering av terminal-window */
 
-/* Button red-button */
+/* Button orange-button */
 #terminal.large {
   width: 800px; 
   height: 600px;
 }
+
 
 
 
